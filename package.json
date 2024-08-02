@@ -1,7 +1,7 @@
 {
-  "name": "metin2-patcher-electron",
-  "author": "Karbust",
-  "description": "A simple metin2 patcher made in Electron with React and TypeScript.",
+  "name": "metin2-patcher-deloth2",
+  "author": "Jefferson",
+  "description": "Un parche metin2 simple hecho en Electron con React y TypeScript.",
   "version": "0.1.0",
   "private": true,
   "main": "build/electron/src_electron/App.js",
@@ -20,7 +20,7 @@
   },
   "build": {
     "extends": null,
-    "productName": "Metin2 Patcher Electron",
+    "productName": "Metin2 Patcher Deloth2",
     "compression": "normal",
     "win": {
       "target": [
@@ -30,9 +30,9 @@
       "requestedExecutionLevel": "requireAdministrator"
     },
     "portable": {
-      "artifactName": "metin2_patcher_electron.exe",
+      "artifactName": "metin2_patcher_deloth2.exe",
       "requestExecutionLevel": "admin",
-      "unpackDirName": "metin2_patcher_electron"
+      "unpackDirName": "metin2_patcher_deloth2"
     },
     "directories": {
       "buildResources": "resources",

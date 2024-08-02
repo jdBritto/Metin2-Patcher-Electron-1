@@ -11,6 +11,7 @@ const Buttons: FunctionComponent = () => {
     // @ts-ignore
     const { state } = useContext(Context)
     const { t } = useTranslation()
+
     const launchConfig = () => ipcRenderer.send('launchConfig')
     const launchClient = () => ipcRenderer.send('launchClient')
     const launchDiscord = () => ipcRenderer.send('launchUrl', { url: discordUrl })
@@ -20,44 +21,92 @@ const Buttons: FunctionComponent = () => {
             language: lang
         })
     }
+    // const startImagePath = '/resources/start.png'
+    // const startHoverImagePath = '/resources/start_hover.png'
+    // const configImagePath = '/resources/config.png'
+    // const configHoverImagePath = '/resources/config_hover.png'
+    // const discordImagePath = '/resources/discord.png'
+    // const discordHoverImagePath = '/resources/discord_hover.png'
+    // const [isHovered1, setIsHovered1] = useState(false)
+    // const [isHovered2, setIsHovered2] = useState(false)
+    // const [isHovered3, setIsHovered3] = useState(false)
 
+    // const handleMouseEnter1 = () => {
+    //     setIsHovered1(true)
+    // }
+
+    // const handleMouseLeave1 = () => {
+    //     setIsHovered1(false)
+    // }
+
+    // const handleMouseEnter2 = () => {
+    //     setIsHovered2(true)
+    // }
+
+    // const handleMouseLeave2 = () => {
+    //     setIsHovered2(false)
+    // }
+
+    // const handleMouseEnter3 = () => {
+    //     setIsHovered3(true)
+    // }
+
+    // const handleMouseLeave3 = () => {
+    //     setIsHovered3(false)
+    // }
     return (
-        <div className='relative'>
-            <div className='absolute right-0'>
+        <div className='relative flex items-center mb-2'>
+            <div className='absolute bottom-20 left-80'>
                 <span
                     aria-hidden='true'
-                    className='flags flag-icon flag-icon-gb mr-3 text-white px-4 py-2 rounded mr-1 mb-1 ease-linear transition-all duration-150'
+                    className='flags flag-icon flag-icon-gb mr-3 text-white px-4 py-2 rounded mb-1 ease-linear transition-all duration-150'
                     style={{ width: '32px', height: '32px' }}
                     onClick={() => changeLanguage('en')}
                 />
                 <span
                     aria-hidden='true'
-                    className='flags flag-icon flag-icon-pt mr-3 text-white px-4 py-2 rounded mr-1 mb-1 ease-linear transition-all duration-150'
+                    className='flags flag-icon flag-icon-es mr-3 text-white px-4 py-2 rounded mb-1 ease-linear transition-all duration-150'
                     style={{ width: '32px', height: '32px' }}
-                    onClick={() => changeLanguage('pt')}
+                    onClick={() => changeLanguage('es')}
                 />
+            </div>
+            <div className='absolute bottom-40 -right-6 flex flex-col gap-4'>
                 {
                     enableDiscordButton && (
                         <button
-                            className='mr-3 bg-gray-500 text-white active:bg-gray-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'
+                            className='boton-discord focus:outline-none transition-all duration-150 mr-1 text-white'
                             type='button'
                             onClick={launchDiscord}
+                            style={{
+                                width: '57px',
+                                height: '66px',
+                            }}
                         >
-                            Discord
+                            {t('discord')}
                         </button>
                     )
                 }
                 <button
-                    className='disabled:opacity-50 mr-3 bg-gray-500 text-white active:bg-gray-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'
+                    className='boton-config focus:outline-none transition-all duration-150 mr-1 text-white'
                     type='button'
                     onClick={launchConfig}
                     disabled={state.completed !== 100}
+                    style={{
+                        width: '66px',
+                        height: '66px',
+                    }}
                 >
                     {t('settings')}
                 </button>
+            </div>
+            <div className='absolute right-20 bottom-20 md:mx-auto'>
                 <button
-                    className='disabled:opacity-50 bg-gray-500 text-white active:bg-gray-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'
+                    className='boton-start focus:outline-none transition-all duration-150 mr-1'
                     type='button'
+                    style={{
+                        width: '150px',
+                        height: '45px',
+                    }}
                     onClick={launchClient}
                     disabled={state.completed !== 100}
                 >

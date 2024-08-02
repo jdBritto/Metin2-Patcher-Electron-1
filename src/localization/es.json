@@ -1,0 +1,15 @@
+{
+    "translation": {
+        "settings": "Config",
+        "play": " ",
+        "dlCompleted": "Descarga completa",
+        "dlProgress": "Descarga en curso",
+        "dlFile": "Descargando {{currentFile}}",
+        "noConnection": "No hay conexión de red.",
+        "errorConnection": "Hubo un error al conectarse al servidor.",
+        "errorDownloadFile": "Ocurrió un error al descargar {{fileName}}",
+        "errorSliderFile": "El archivo del control deslizante no se encontró en el servidor remoto.",
+        "discord": "Discord",
+        "es": "Espa"
+    }
+}

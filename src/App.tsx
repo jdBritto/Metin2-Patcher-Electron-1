@@ -73,12 +73,14 @@ const App: FunctionComponent = () => {
     }, [dispatch])
 
     return (
-        <div className='h-screen w-screen bg-gray-50'>
-            <Titlebar />
-            <div className='m-2.5'>
-                { enableSlider && <Slider /> }
-                <ProgressBar />
-                <Buttons />
+        <div className='md:flex items-center h-screen w-screen pb-2 bg-deloth'>
+            <div className='md:container md:mx-auto'>
+                <Titlebar />
+                <div className='m-2.5'>
+                    { enableSlider && <Slider /> }
+                    <ProgressBar />
+                    <Buttons />
+                </div>
             </div>
         </div>
     )

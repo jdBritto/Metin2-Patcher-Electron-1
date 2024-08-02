@@ -13,10 +13,17 @@ body {
     line-height: 1.6;
     color: #212529;
     text-align: left;
-    background-color: #f8fafc;
     overflow: hidden;
     position: relative;
     height: 100%;
+}
+
+.bg-deloth {
+    background-image: url("../../resources/background_dark.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
 }
 
 code {
@@ -72,12 +79,12 @@ code {
 }
 
 :root {
-    --bg1: #0c0d10;
-    --bg2: #14151b;
+    --bg1: #0c0d1054;
+    --bg2: #154722;
     --bg2-alt: #191a21;
-    --text-normal: #bfc4c9;
-    --text-muted: #95989d;
-    --accent: #3a71c1;
+    --text-normal: #fff;
+    --text-muted: #fff;
+    --accent: #5a71c1;
     --accent-faded: rgba(58, 113, 193, 0.4);
 }
 
@@ -100,22 +107,114 @@ code {
     width: 100%;
 }
 
+.boton-discord {
+    color: #000;
+    background-image: url("../../resources/discord.png");
+    background-size: cover;
+    background-position: center center;
+    min-width: 66px;
+    min-height: 81px;
+    overflow: hidden; /* Para ocultar el desbordamiento */
+    transition: transform 0.3s ease; /* Transición suave del efecto de zoom */
+}
+
+.boton-discord:hover {
+    color: var(--text-muted);
+    background-image: url("../../resources/discord_hover.png");
+    transform: scale(1.1); 
+    filter: grayscale(100%) brightness(80%);
+}
+
+.boton-config {
+    color: #00000000;
+    background-image: url("../../resources/config.png");
+    background-size: cover;
+    background-position: center center;
+    width: 54px;
+    height: 66px;
+    overflow: hidden; /* Para ocultar el desbordamiento */
+    transition: transform 0.3s ease; /* Transición suave del efecto de zoom */
+}
+
+.boton-config:hover {
+    color: #fff;
+    background-image: url("../../resources/config_hover.png");
+    transform: scale(1.1); 
+    filter: grayscale(100%) brightness(80%);
+}
+
+.boton-start {
+    background-image: url("../../resources/start.png");
+    background-size: cover;
+    background-position: center center;
+    width: 150px;
+    height: 45px;
+    overflow: hidden; /* Para ocultar el desbordamiento */
+    transition: transform 0.3s ease; /* Transición suave del efecto de zoom */
+}
+
+.boton-start:hover {
+    background-image: url("../../resources/start_hover.png");
+    transform: scale(1.1);
+}
+
+#minimize{
+    background-image: url("../../resources/minimize.png");
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden; /* Para ocultar el desbordamiento */
+    transition: transform 0.3s ease; /* Transición suave del efecto de zoom */
+}
+#minimize:hover{
+    background-image: url("../../resources/min_hover.png");
+    transform: scale(1.1);
+    filter: grayscale(100%) brightness(80%);
+}
+
+#close{
+    background-image: url("../../resources/close.png");
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden; /* Para ocultar el desbordamiento */
+    transition: transform 0.3s ease; /* Transición suave del efecto de zoom */
+}
+
+#close:hover{
+    background: linear-gradient(to bottom rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+    background-image: url("../../resources/close_hover.png");
+    transform: scale(1.1); 
+    filter: grayscale(100%) brightness(80%);
+}
+
 .titlebar {
-    background-color: var(--bg1);
     color: white;
-    width: 100vw;
     height: 28px;
+    width: 107%;
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     -webkit-app-region: drag;
 }
 
 .title {
-    height: auto;
-    text-indent: 15px;
-    opacity: 0.5;
-    left: 0;
+    left: 12rem;
     position: absolute;
+    width: 193px;
+    height: 98px;
+    background-image: url("../../resources/deloth2.png");
+    background-size: cover;
+    background-position: center center;
+    text-indent: -9999px; /* Oculta el texto del enlace */
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+  
+.bounce-animation {
+    animation: bounce 2s ease infinite; /* Ajusta la duración y la suavidad de la animación según sea necesario */
 }
 
 .controls {
@@ -148,33 +247,39 @@ code {
 }
 
 .titlebar button:hover {
-    background-color: var(--bg2);
+    align-items: center;
 }
 
 .titlebar button:active {
-    background-color: var(--bg2-alt);
+    align-items: center;
 }
 
 .titlebar button#close:hover {
-    background-color: #d13d3d;
+    align-items: center;
     color: #fff;
 }
 
 .titlebar button#close:active {
-    background-color: #b12a2a;
+    align-items: center;
     color: #fff;
 }
 
 .swiper {
-    width: 100%;
-    height: 300px;
+    width: 55%;
+    height: 280px;
+    left: 3.5rem;
+    border-radius: 15px;
+}
+@media(min-width: 768px){
+    .swiper{
+        width: 65%;
+    }
 }
 
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background-color: #f8fafc;
-
+    background-color: #f8fafc00;
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -210,4 +315,13 @@ code {
 .swiper-pagination-bullet-active {
     color: #fff;
     background: rgba(75, 85, 99, 1) !important;
+}
+
+.flags{
+    overflow: hidden; /* Para ocultar el desbordamiento */
+    transition: transform 0.3s ease; /* Transición suave del efecto de zoom */
+}
+.flags:hover{
+    cursor: pointer;
+    filter: grayscale(100%) brightness(80%);
 }

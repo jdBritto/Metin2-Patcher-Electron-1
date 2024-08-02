@@ -9,7 +9,7 @@ const ProgressBar: FunctionComponent = () => {
     const { t } = useTranslation()
 
     return (
-        <div className='pt-1'>
+        <div className='pt-1 ml-20 mr-3'>
             <div className='flex mb-2 items-center justify-between'>
                 <div>
                     <span
@@ -24,7 +24,7 @@ const ProgressBar: FunctionComponent = () => {
                     </span>
                 </div>
                 <div className='text-right'>
-                    <span className='text-xs font-semibold inline-block text-gray-600'>
+                    <span className='text-xs font-semibold inline-block text-gray-50'>
                         {state.completed}
                         %
                     </span>
@@ -50,7 +50,7 @@ const ProgressBar: FunctionComponent = () => {
                     </span>
                 </div>
                 <div className='text-right'>
-                    <span className='text-xs font-semibold inline-block text-gray-600'>
+                    <span className='text-xs font-semibold inline-block text-gray-50'>
                         {state.fileProgress}
                         %
                     </span>

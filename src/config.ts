@@ -1,11 +1,11 @@
-export const patchlistUrl = 'https://url/files.json'
-export const patchlistFolder = 'https://url/files/'
+export const patchlistUrl = 'http://localhost/electron/files.json'
+export const patchlistFolder = 'http://localhost/electron/electron/files/'
 
 export const enableSlider = true //if false the slider will be disabled
 
 //if enableSlider is false the value of this variables is optional
-export const patchSliderUrl = 'https://url/slider.json'
-export const patchSliderImages = 'https://url/slider/'
+export const patchSliderUrl = 'http://localhost/electron/slider.json'
+export const patchSliderImages = 'http://localhost/electron/slider/'
 
 /*
 Karbust Localhost Debug URLs:
@@ -17,10 +17,10 @@ export const patchSliderImages = 'http://localhost:81/electron/slider/'
  */
 
 export const enableDiscordButton = true //if false the button will not be displayed.
-export const discordUrl = 'https://discord.gg/invite'
+export const discordUrl = 'https://discord.gg/ewuQDnETT8'
 
-export const serverName = 'Karbust'
-export const binaryName = 'Metin2Debug.exe'
+export const serverName = 'Deloth2'
+export const binaryName = 'Deloth2.exe'
 export const configName = 'config.exe'
 export const launchParameters = ['--something']
 
@@ -50,4 +50,4 @@ export const ServerUrlRegister = 'https://karbust.me/'
 export const ServerUrlSupport = 'https://karbust.me/'
 */
 
-export const debugFolder = 'C:\\Users\\Karbust\\Desktop\\tests'
+export const debugFolder = 'C:\\Users\\Jeffer\\Desktop\\test patch'

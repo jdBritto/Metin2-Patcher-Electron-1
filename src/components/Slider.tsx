@@ -31,7 +31,7 @@ const Slider: FunctionComponent = () => {
     }, [])
 
     return (
-        <div className='pt-1 mb-3'>
+        <div className='pt-3 mb-4'>
             <Swiper
                 loop
                 centeredSlides

@@ -2,6 +2,7 @@ import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 
 import languageEN from './localization/en.json'
+import languageES from './localization/es.json'
 import languagePT from './localization/pt.json'
 
 i18n
@@ -9,10 +10,11 @@ i18n
     .init({
         resources: {
             en: languageEN,
-            pt: languagePT
+            pt: languagePT,
+            es: languageES,
         },
-        supportedLngs: ['en', 'pt'],
-        fallbackLng: 'en',
+        supportedLngs: ['en', 'es', 'pt'],
+        fallbackLng: 'es',
         debug: process.env.NODE_ENV === 'development',
         keySeparator: '.',
         interpolation: {

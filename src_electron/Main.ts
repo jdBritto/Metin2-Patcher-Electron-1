@@ -59,11 +59,11 @@ export default class Main {
         Main.workerWindow.loadFile(isDev ? '../../../public/worker.html' : 'build/worker.html')
 
         Main.mainWindow = new Main.BrowserWindow({
-            width: 800,
+            width: 900,
             height: enableSlider ? 520 : 200,
             resizable: false,
             fullscreenable: isDev,
-            //transparent: true,
+            transparent: true,
             frame: false,
             useContentSize: false,
             webPreferences: {
@@ -81,7 +81,7 @@ export default class Main {
         }
 
         if (!existsSync(Main.settingsFile)) {
-            const obj: any = { language: 'en' }
+            const obj: any = { language: 'es' }
             writeFileSync(Main.settingsFile, JSON.stringify(obj))
             i18next.changeLanguage('en')
         } else {
